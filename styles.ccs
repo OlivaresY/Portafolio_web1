@@ -27,8 +27,8 @@ body {
 }
 
 .sidebar img {
-  width: 120;
-  height: 120;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   margin-bottom: 1rem;
 }
@@ -41,47 +41,41 @@ body {
 
 .sidebar p {
   font-size: 1rem;
-  color: 3bbb;
-}
-
-/*sidebar desktop*/
-@media (min-width: 992px) {
-  .sidebar {
-    flex: 0 0 300px;
-    height: 100vh;
-    position: sticky;
-  }
+  color: #bbb;
 }
 
 .content-area {
   padding: 2rem;
 }
 
+
+/*sidebar desktop*/
 @media (min-width: 992px) {
-  body {
-    padding: 2rem;
-  }
 
-  .layout{
-    flex-direction: row;
-    height: 100vh;
-    border-radius: 20px;
-    overflow: hidden;
-  }
+    body {
+        padding: 2rem;
+    }
 
-  .sidebar {
-    flex: 0 0 300px;
-    height: 100vh;
-    position: sticky;
-    top: 0;
-    background: #1c1c1c;
-  }
+    .layout{
+        flex-direction: row;
+        height: 100vh;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .sidebar {
+        flex: 0 0 300px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
   
   .content-area {
-    flex: 1;
-    height: 100vh;
-    overflow-y: auto;
-    background: #222;
-    padding: 3rem;
+        flex: 1;
+        height: 100vh;
+        overflow-y: auto;
+        background: #222;
+        padding: 3rem;
   }
+
 }
