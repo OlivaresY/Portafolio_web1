@@ -7,14 +7,24 @@
 
 body {
   font-family: sans-serif;
-  background: #111;
+  background: #0f0f0f;
   color: #fff;
+
+  display_ flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh
 }
 
 .layout {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  width: 95%;
+  max-width: 1400px;
+  background: #1a1a1a;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
 }
 
 .sidebar {
@@ -52,27 +62,19 @@ body {
 /*sidebar desktop*/
 @media (min-width: 992px) {
 
-    body {
-        padding: 2rem;
-    }
-
     .layout{
         flex-direction: row;
-        height: 100vh;
-        border-radius: 20px;
-        overflow: hidden;
     }
 
     .sidebar {
         flex: 0 0 300px;
-        height: 100vh;
+        height: 100%;
         position: sticky;
         top: 0;
     }
   
   .content-area {
         flex: 1;
-        height: 100vh;
         overflow-y: auto;
         background: #222;
         padding: 3rem;
