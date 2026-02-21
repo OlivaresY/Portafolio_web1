@@ -10,10 +10,10 @@ body {
   background: #0f0f0f;
   color: #fff;
 
-  display_ flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh
+  min-height: 100vh;
 }
 
 .layout {
@@ -58,26 +58,29 @@ body {
   padding: 2rem;
 }
 
-
 /*sidebar desktop*/
 @media (min-width: 992px) {
 
-    .layout{
-        flex-direction: row;
-    }
+  body {
+    align-items: stretch;
+  }
 
-    .sidebar {
-        flex: 0 0 300px;
-        height: 100%;
-        position: sticky;
-        top: 0;
-    }
+  .layout{
+      flex-direction: row;
+  }
+
+  .sidebar {
+      flex: 0 0 300px;
+      height: 100%;
+      position: sticky;
+      top: 0;
+  }
   
   .content-area {
-        flex: 1;
-        overflow-y: auto;
-        background: #222;
-        padding: 3rem;
+      flex: 1;
+      overflow-y: auto;
+      background: #222;
+      padding: 3rem;
   }
 
 }
