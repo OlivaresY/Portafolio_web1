@@ -9,11 +9,6 @@ body {
   font-family: sans-serif;
   background: #0f0f0f;
   color: #fff;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
 }
 
 .layout {
@@ -83,4 +78,40 @@ body {
       padding: 3rem;
   }
 
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #00bfff;
+}
+
+projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  flex: 1 1 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
