@@ -10,8 +10,6 @@ body {
   font-family: sans-serif;
   background: #0f0f0f;
   color: #fff;
-  /*height: 100vh;
-  overflow: hidden;*/
 }
 
 /*Layout GENERAL*/
@@ -31,9 +29,6 @@ body {
 .sidebar {
   padding: 2rem;
   background: #1c1c1c;
-  /*display: flex;
-  flex-direction: column;
-  align-items: center;*/
   text-align: center;
 }
 
@@ -42,13 +37,8 @@ body {
   height: 120px;
   border-radius: 50%;
   margin-bottom: 1rem;
+  object-fit: cover;
 }
-/*
-.sidebar h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.3rem;
-  color: #00bfff;
-}*/
 
 .sidebar strong {
   display: block;
@@ -91,6 +81,7 @@ nav a {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -213,4 +204,12 @@ section h2 {
     padding: 4rem;
   }
 
+}
+
+footer {
+  text-align: center;
+  padding-top: 2rem;
+  color: #aaa;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
 }
