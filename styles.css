@@ -269,10 +269,10 @@ footer {
 }
 
 /*link activo*/
-.nav-link.activo {
+.nav-link.active {
   color: #00bfff;
 }
 
-.nav-link.activo::after {
+.nav-link.active::after {
   width: 100%;
 }

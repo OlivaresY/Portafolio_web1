@@ -6,28 +6,6 @@
             <title>Mi Portafolio</title>
             <link rel="stylesheet" href="styles.css">
         </head>
-
-        <script>
-            const links = document.querySelectorAll('.nav-link');
-            const sections = document.querySelectorAll('.main-section');
-
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-
-                    links.forEach(l => l.classList.remove('active'));
-                     
-                    this.classList.add('active');
-
-                    sections.forEach(section => {
-                        section.classList.remove('active-section');
-                    });
-
-                    const target = this.getAttribute('data-section');
-                    document.getElementById(target).classList.add('active-section');
-                });
-            })
-        </script>
         <body>
       
             <div class="layout">
@@ -47,12 +25,13 @@
                 <div class="content-area">
                     <!--Barra superior -->
                     <header class="top-bar">
-                        <h1>About Me</h1>
+                        <h1 id="page-title">Sobre mi</h1>
                         <nav>
                             <ul>
+                                <li><a href="#" class="nav-link active" data-section="hero">Inicio</a></li>
                                 <li><a href="#" class="nav-link active" data-section="about">Sobre</a></li>
                                 <li><a href="#" class="nav-link" data-section="projects">Proyectos</a></li>
-                                <li><a href="#" class="nac-link" data-section="contact">Contacto</a></li>
+                                <li><a href="#" class="nav-link" data-section="contact">Contacto</a></li>
                             </ul>
                         </nav>
                     </header>
@@ -115,6 +94,37 @@
                     <footer>
                         <p>© 2026 Mi nombre - Todos los derechos reservados</p>
                     </footer> 
+
+                    <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const links = document.querySelectorAll('.nav-link');
+                        const sections = document.querySelectorAll('.main-section');
+                        const pegaTitle = document.getElementById('page-title');
+
+                        links.forEach(link => {
+                            link.addEventListener('click', function(e) {
+                                e.preventDefault();
+
+                                /*Quita la clase activa*/
+                                links.forEach(l => l.classList.remove('active'));
+                                this.classList.add('active');
+
+                                /*oculta secciones*/
+                                sections.forEach(section => {
+                                    section.classList.remove('active-section');
+                                });
+
+                                /*muestra seccion correcta*/
+                                const target = this.getAttribute('data-section');
+                                document.getElementById(target).classList.add('active-section');
+
+                                /*actualiza titulo*/
+                                pageTitle.textContent = this.textContent;
+
+                            });
+                        });
+                    });
+                    </script>
                 </div>
             </div>
         </body>
