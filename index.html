@@ -5,6 +5,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Mi Portafolio</title>
             <link rel="stylesheet" href="styles.css">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
         </head>
         <body>
       
@@ -25,11 +26,12 @@
                 <div class="content-area">
                     <!--Barra superior -->
                     <header class="top-bar">
-                        <h1 id="page-title">Sobre mi</h1>
+                        <h1 id="page-title">Inicio</h1>
                         <nav>
                             <ul>
                                 <li><a href="#" class="nav-link active" data-section="hero">Inicio</a></li>
-                                <li><a href="#" class="nav-link active" data-section="about">Sobre</a></li>
+                                <li><a href="#" class="nav-link" data-section="about" data-title="Sobre mí">Sobre</a></li>
+                                <li><a href="#" class="nav-link" data-section="skills">Habilidades</a></li>
                                 <li><a href="#" class="nav-link" data-section="projects">Proyectos</a></li>
                                 <li><a href="#" class="nav-link" data-section="contact">Contacto</a></li>
                             </ul>
@@ -40,19 +42,43 @@
                     <main>
 
                         <section id="hero" class="main-section active-section">
-                            <h2>Hola, soy desarrollador de aplicaciones web y moviles</h2>
-                                <p>Bienvenido a mi portafolio personal.</p>
+                            <h2>Hola, soy desarrollador de aplicaciones web y móviles</h2>
+                            <pclass="hero-description">
+                                Apasionado por transformar ideas en productos digitales 
+                                funcionales y atractivos. Me especializo tanto en el 
+                                backend como en el frontend, lo que me permite construir
+                                soluciones completas, escalables y con una experiencia de
+                                usuario impecable. Mi objetivo es ayudar a empresas y 
+                                emprendedores a convertir sus proyectos en aplicaciones 
+                                modernas que realmente generen impacto.
+                            </p>
+                            <p class="hero-welcome">
+                                Bienvenido a mi portafolio personal.
+                            </p>
+
                         </section>
 
                         <section id="about" class="main-section">
-                            <h2>Sobre mí</h2>
                             <p>
-                                Soy desarrollador en formación apasionado por el diseño y la programación.
+                                Soy estudiante de la Universidad Tecnológica de Costa Rica (TEC), en la carrera de 
+                                Técnico Medio en Desarrollo de Aplicaciones Web y Móviles. Me apasiona el diseño 
+                                y la programación, y cuento con experiencia tanto en el frontend como en el backend, 
+                                lo que me permite crear soluciones completas, funcionales y escalables.
+                            </p>
+
+                            <p>
+                                Además, tengo conocimientos en servicio al cliente y resolución de problemas, 
+                                habilidades que me permiten comprender las necesidades de los usuarios y desarrollar 
+                                aplicaciones prácticas con una excelente experiencia de uso.
+                            </p>
+                               
+                            <p class="about-goal">
+                                 Mi objetivo es seguir creciendo como desarrollador y aportar valor a proyectos 
+                                que transformen ideas en productos digitales de impacto.
                             </p>
                         </section>
 
                         <section id="skills" class="main-section">
-                            <h2>Habilidades</h2>
                             <div class="skills-container">
                                 <span class="skill">HTML</span>
                                 <span class="skill">CSS</span>
@@ -65,7 +91,6 @@
                         </section>
 
                         <section id="projects" class="main-section">
-                            <h2>Proyectos</h2>
 
                             <div class="projects-container">
                                 <article class="card">
@@ -86,7 +111,6 @@
                         </section>
 
                         <section id="contact" class="main-section">
-                            <h2>Contacto</h2>
                             <p>aquí irá un formulario de contacto.</p>
                         </section> 
                     </main>
@@ -119,7 +143,8 @@
                                 document.getElementById(target).classList.add('active-section');
 
                                 /*actualiza titulo*/
-                                pageTitle.textContent = this.textContent;
+                                const customTitle = this.getAttribute('data-title');
+                                pegaTitle.textContent = customTitle ? customTitle : this.textContent;
 
                             });
                         });

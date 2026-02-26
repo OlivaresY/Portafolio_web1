@@ -7,7 +7,7 @@
 
 /*mobile first*/
 body {
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #0f0f0f;
   color: #fff;
 }
@@ -124,18 +124,37 @@ section h2::after {
 }
 
 #hero {
-  padding: 2rem 0;
+  padding: 3rem 0;
+  max-width: 800px;
 }
 
 #hero h2 {
-  font-size: 2rem;
-  line-height: 1.3;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #ffffff;
 }
 
 #hero p {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #00bfff;
+  font-weight: 500;
+}
+
+#about p {
   margin-top: 1rem;
-  font-size: 1.1rem;
-  color: #bbb;
+  line-height: 1.7;
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.about-goal {
+  margin-top: 2rem;
+  padding-left: 1rem;
+  border-left: 4px solid #00bfff;
+  font-weight: 500;
+  color: #ffffff;
 }
 
 /*Skills*/
@@ -210,6 +229,10 @@ section h2::after {
 
 /*Desktop 1024px*/
 @media (min-width: 1024px) {
+
+  #hero h2 {
+    font-size: 2.8rem;
+  }
 
   body {
     height: 100vh;
