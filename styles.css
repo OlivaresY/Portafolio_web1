@@ -171,6 +171,15 @@ section h2::after {
   padding: 0.6rem 1.2rem;
   border-radius: 20px;
   font-weight: bold;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.skill:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 191, 255, 0.3);
 }
 
 /*projects*/
@@ -244,7 +253,7 @@ section h2::after {
   }
 
   .sidebar {
-      flex: 0 0 300px;
+      flex: 0 0 220px;
       height: 100vh;
   }
   
@@ -259,6 +268,13 @@ section h2::after {
     flex: 1 1 calc(33.333% - 2rem);
   }
 
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    justify-content: center;
+    gap: 1.5rem 2rem;
+  }
+
 }
 
 /*Large screens 1440px*/
@@ -270,6 +286,10 @@ section h2::after {
 
   .content-area {
     padding: 4rem;
+  }
+
+  .skills-container {
+    gap: 1.5rem 1.5rem;
   }
 
 }
