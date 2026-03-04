@@ -225,7 +225,7 @@ section h2::after {
   }
 
   .sidebar {
-    flex: 0 0 220px;
+    flex: 0 0 180px;
   }
 
   .content-area {
@@ -261,7 +261,7 @@ section h2::after {
   }
 
   .sidebar {
-      flex: 0 0 220px;
+      flex: 0 0 180px;
       height: 100vh;
   }
   
