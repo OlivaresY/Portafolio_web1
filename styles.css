@@ -246,6 +246,32 @@ section h2::after {
 
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  /* Ajuste altura de imágenes para que no se corten */
+  .card img {
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+  }
+
+  .projects-container {
+    justify-content: space-between;
+  }
+
+  /* Scroll vertical en content-area para tablet */
+  .content-area {
+    overflow-y: auto;
+    height: auto;
+  }
+
+  /* Evitar que layout corte las cards */
+  .layout {
+    overflow-x: visible;
+  }
+
+}
+
 
 /*Desktop 1024px*/
 @media (min-width: 1024px) {
@@ -457,3 +483,11 @@ footer {
   transform: translateY(-3px);
 }
 
+@media (max-width: 767px) {
+  .card img {
+    width: 100%;
+    height: auto;
+    max-height: 45vw; /* altura relativa al ancho de la pantalla */
+    object-fit: cover;
+  }
+}
