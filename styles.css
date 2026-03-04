@@ -343,6 +343,18 @@ footer {
   font-weight: 500;
 }
 
+.yellow {
+  color: #ffd43b;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.blue {
+  color: #00bfff;
+}
+
 .sidebar-card {
   margin-top: 2rem;
   padding-top: 2rem;
