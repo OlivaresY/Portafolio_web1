@@ -336,8 +336,8 @@ section h2::after {
   .card img {
     width: 100%;
     height: auto;
-    max-height: 45vw; /* altura relativa al ancho de la pantalla */
     object-fit: cover;
+    max-height: none;
   }
 }
 
