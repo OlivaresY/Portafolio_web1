@@ -245,10 +245,9 @@ section h2::after {
   }
 
 }
-
+/* Ajuste altura de imágenes para que no se corten */
 @media (min-width: 768px) and (max-width: 1023px) {
 
-  /* Ajuste altura de imágenes para que no se corten */
   .card img {
     height: auto;
     max-height: 250px;
@@ -336,8 +335,9 @@ section h2::after {
   .card img {
     width: 100%;
     height: auto;
-    object-fit: cover;
     max-height: none;
+    object-fit: cover;
+    border-radius: 10px;
   }
 }
 
