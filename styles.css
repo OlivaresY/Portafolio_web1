@@ -88,12 +88,11 @@ body {
 /*Navigattion*/
 nav ul {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem 2rem;
-  justify-items: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   margin: 0;
+  padding: 0;
 }
 
 nav {
@@ -277,9 +276,39 @@ section h2::after {
   }
 
   .top-bar {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .top-bar h1 {
+    margin: 0;
+    line-height: 1;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 1rem 2rem;
+    justify-items: center;
+    align-items: center; /* centra los enlaces */
+    margin: 0;
+  }
+    
+  top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* alinea h1 y nav */
+    gap: 1rem;
+    margin-bottom: 3rem;
   }
 
 }
@@ -373,6 +402,15 @@ section h2::after {
     justify-content: center;
     gap: 1.5rem 2rem;
 }
+
+nav ul {
+    list-style: none;
+    display: flex; /* vuelve a fila horizontal */
+    flex-direction: row;
+    gap: 2rem;
+    margin: 0;
+  }
+
 
 }
 
@@ -533,8 +571,13 @@ footer {
   text-decoration: none;
 }
 
-.social-links {
+.social-section {
   margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #333; /* línea divisora */
+}
+
+.social-links {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
@@ -551,3 +594,4 @@ footer {
   color: #ffd43b;
   transform: translateY(-3px);
 }
+
